@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    font-size: 30pt;
+    font-family: 'Press Start 2P', sans-serif;
+}
+
+#grid-container {
+    display: grid;
+    grid-template-columns: repeat(20, 25px);
+    grid-template-rows: repeat(15, 25px);
+    gap: 1px;
+}
+
+.cell {
+    width: 25px;
+    height: 25px;
+    background-color: black;
+    border: 3.25px solid rgb(55 65 81);
+}
+
+#overlay-image {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+button {
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #333;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 2;
+    font-family: 'Press Start 2P', sans-serif;
+    /* Apply the font to buttons */
+}
+
+button:hover {
+    background-color: #555;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.start-btn {
+    text-align: center;
+    /* display: inline-block; */
+    width: fit-content;
+    margin: 15px;
+    font-weight: bold;
+    padding: 15px 10px 15px 10px;
+    background-color: lightgray;
+    text-shadow: -1px -1px black, 1px 1px white;
+    color: rgb(128, 128, 128);
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    -o-border-radius: 7px;
+    border-radius: 7px;
+    box-shadow: 0 .2em gray;
+    cursor: pointer;
+}
+
+.start-btn:active {
+    box-shadow: none;
+    position: relative;
+    top: .2em;
+}
